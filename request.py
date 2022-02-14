@@ -11,6 +11,7 @@ def get_data(city):
     response = requests.get(url)
     if response:
         data = response.json()
+
         temp_kelvin = data["main"]["temp"]
         country = data["sys"]["country"]
         icon = data["weather"][0]["icon"]
